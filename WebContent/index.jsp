@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="cadastra" method="post">
-Nome:<input type="text" name="emailUsuario"><br>
+<form action="cadastra">
+Email:<input type="text" name="emailUsuario"><br>
 Senha:<input type="password" name="senhaUsuario"><br>
 <input type="submit" value="Cadastrar">
 </form>
