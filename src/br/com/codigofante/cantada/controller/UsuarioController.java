@@ -12,9 +12,9 @@ import br.com.codigofante.cantada.modelo.Usuario;
 @Controller
 public class UsuarioController {
 	
+	@Autowired
 	JPAUsuarioDao jpaUsuario;
 
-	@Autowired
 	@RequestMapping("cadastra")
 	public String olaMundo(Usuario usuario){
 		jpaUsuario.adiciona(usuario);

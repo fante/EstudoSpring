@@ -6,11 +6,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import br.com.codigofante.cantada.modelo.Usuario;
 
-@Repository
+@Service
 public class JPAUsuarioDao implements  UsuarioDao {
 	
 	@PersistenceContext
@@ -30,7 +32,7 @@ public class JPAUsuarioDao implements  UsuarioDao {
 
 	@Transactional
 	@Override
-	public void adiciona(Usuario usuario) {
+	public void adiciona(@ModelAttribute("usuario")  Usuario usuario) {
 		System.out.println(manager);
 		System.out.println(usuario.getEmailUsuario());
 		manager.persist(usuario);
